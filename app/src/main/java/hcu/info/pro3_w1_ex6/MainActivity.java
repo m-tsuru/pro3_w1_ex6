@@ -23,21 +23,21 @@ public class MainActivity extends AppCompatActivity {
 
     int checkResult(int p0, int p1) {
         /*
-        p0, p1 の出し手 0 ~ 2 の勝敗を判定する。
-        p0　が勝った場合 0 を返し、p1 が勝った場合 1 を返す。引き分けは -1 を返す。
-        0: グー, 1: チョキ, 2: パーとする
+            p0, p1 の出し手 0 ~ 2 の勝敗を判定する。
+            p0　が勝った場合 0 を返し、p1 が勝った場合 1 を返す。引き分けは -1 を返す。
+            0: グー, 1: チョキ, 2: パーとする
         */
 
         if (p0 == p1) {
             return -1;
         } else if (p0 < p1) {
-            if (p0 == 0) {
+            if (p0 == 0 && p1 == 2) {
                 return 1;
             } else {
                 return 0;
             }
         } else {
-            if (p0 == 2) {
+            if (p0 == 2 && p1 == 0) {
                 return 0;
             }
                 return 1;
